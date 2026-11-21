@@ -1,103 +1,94 @@
 # Palestra: Código que fala
 
-Apresentação e demo da palestra "Código que fala: observabilidade na prática, sem jargão e sem depender de ferramenta", no DevFest São Paulo 2026 (GDG Cloud São Paulo), em 28/11/2026, na FIAP Paulista.
+<p align="center">
+  <strong>Observabilidade na prática, sem jargão e sem depender de ferramenta.</strong><br>
+  Larissa Souza · DevFest São Paulo 2026 · GDG Cloud São Paulo
+</p>
 
-## Arquivos
+<p align="center">
+  <a href="https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/"><img alt="Slides no GitHub Pages" src="https://img.shields.io/badge/slides-GitHub%20Pages-6A2BDB?style=flat&amp;logo=githubpages&amp;logoColor=white"></a>
+  <a href="https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/demo.html"><img alt="Demo interativa" src="https://img.shields.io/badge/demo-interativa-3B5BFF?style=flat&amp;logo=html5&amp;logoColor=white"></a>
+  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=flat&amp;logo=html5&amp;logoColor=white">
+  <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=flat&amp;logo=css3&amp;logoColor=white">
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&amp;logo=javascript&amp;logoColor=17122E">
+  <img alt="Layout responsivo" src="https://img.shields.io/badge/layout-responsivo-E8338C?style=flat">
+  <a href="LICENSE"><img alt="Licença MIT" src="https://img.shields.io/badge/licen%C3%A7a-MIT-F5873B?style=flat"></a>
+</p>
 
-| Arquivo                      | O que é                                                                                                         | Quando mexer                                     |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| `index.html`                 | A apresentação, com 40 slides. CSS, JavaScript, fontes e notas do apresentador ficam dentro do próprio arquivo. | Para mudar textos, slides, notas, links e cores. |
-| `demo.html`                  | Demo ao vivo: um reembolso com logs e métricas, antes e depois da tag de erro. Dados simulados, sem servidor.   | Para mudar a simulação ou o texto da demo.       |
-| `img/foto_perfil.jpg`        | Foto usada no slide 3 ("Quem sou eu").                                                                          | Para trocar a foto.                              |
-| `README.md`                  | Este guia.                                                                                                      | Raramente.                                       |
+<p align="center">
+  <a href="https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/"><strong>Ver os slides</strong></a> ·
+  <a href="https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/demo.html"><strong>Abrir a demo</strong></a> ·
+  <a href="https://github.com/eu-larissasouza/devfest2026-codigo-que-fala">Repositório</a>
+</p>
 
-Os elementos de identidade visual usados nos slides ficam em `img/`. Mantenha essa pasta junto com `index.html`.
+## Sobre a palestra
 
-## Como abrir
+Esta palestra parte de um caso de falha em um fluxo de reembolso para mostrar como logs, métricas e alertas ajudam a descobrir onde olhar — sem depender de uma ferramenta específica. O foco é distinguir uma regra de negócio conhecida e tratada de uma falha que precisa ser investigada.
 
-1. Dê dois cliques em `index.html`. Ele abre no navegador, sem instalar nada e sem servidor.
-2. Para a demo, use o botão "Abrir a demo em outra aba", no slide 30, ou abra `demo.html` diretamente.
-3. Mantenha `index.html`, `demo.html` e a pasta `img/` juntos. Sem a pasta `img/`, a foto do slide 3 não aparece.
+Palestra programada para 28/11/2026, na FIAP Paulista, como parte do DevFest São Paulo 2026.
 
-## Como navegar
+## Acesso rápido
 
-| Ação                  | Como                                                                                                             |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Próximo slide         | Setas → e ↓, espaço, PageDown, clique na metade direita da tela, deslizar para a esquerda (celular) ou o botão › |
-| Slide anterior        | Setas ← e ↑, PageUp, clique na metade esquerda da tela, deslizar para a direita (celular) ou o botão ‹           |
-| Notas do apresentador | Tecla N, que mostra e esconde as notas na parte de baixo da tela                                                 |
-| Ir direto a um slide  | Acrescente `#número` ao endereço, por exemplo `index.html#30`                                                    |
+- **Apresentação:** [abrir os slides](https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/)
+- **Demo interativa:** [abrir a demo](https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/demo.html)
+- **Código-fonte:** [eu-larissasouza/devfest2026-codigo-que-fala](https://github.com/eu-larissasouza/devfest2026-codigo-que-fala)
 
-Os botões ‹ e › aparecem em telas de até 860 px de largura. A barra no rodapé mostra o progresso, e o contador (por exemplo, `30 / 40`) fica no canto inferior direito. Clicar em um link não troca de slide.
+## O material
 
-## Mapa dos slides
+- **40 slides** com navegação por teclado, clique e gesto em telas sensíveis ao toque.
+- O **slide 2** reúne os links para a apresentação, a demo e o repositório.
+- O **slide 30** introduz a demo; o **slide 40** tem o perfil do LinkedIn e o QR code.
+- A demo simula um reembolso em quatro etapas, com dados gerados no navegador e sem servidor.
+- O layout se adapta a desktop, tablet e celular.
 
-| Slides  | Bloco                                                                                                                 |
-| ------- | --------------------------------------------------------------------------------------------------------------------- |
-| 1 a 6   | Abertura: capa, material, quem sou eu, roteiro, pergunta para a sala e palavras simples                              |
-| 7 a 11  | Bloco 1, A história: um cliente sem saldo, a tela certa que não apareceu, a causa e o hotfix. Termina no slide 11     |
-| 12 a 18 | Bloco 2, O que logar: log como mensagem, bom x ruim, contexto, id e a distinção entre regra tratada e falha a investigar. Termina no slide 18 |
-| 19 a 23 | Bloco 3, O que medir: sintoma x causa, quatro sinais, percentis e métrica por etapa e tipo. Termina no slide 23       |
-| 24 a 29 | Bloco 4, Quando alertar: o monitor antigo para HTTP 4xx–5xx, sintoma, ação e SLO. Termina no slide 29                 |
-| 30 a 34 | Bloco 5, Demo e desfecho: a demo, os 15 minutos, dicas do livro e postmortem. Termina no slide 34                     |
-| 35 a 40 | Para levar: recapitulação, antes e depois, checklist, referências, fechamento e slide final                           |
+## Estrutura do repositório
 
-O slide 2 traz os links para a apresentação, a demo e o repositório; o QR code aponta para o repositório. O slide 30 abre a demo, o slide 38 tem as referências e o slide 40 inclui o perfil do LinkedIn com link e QR code.
+```text
+devfest-codigo-que-fala/
+├── index.html       # Slides; estilos e navegação embutidos
+├── demo.html        # Demo interativa
+├── img/             # Foto, favicon e elementos visuais
+├── style.css        # Arquivo auxiliar, não carregado pelo deck atual
+├── deck.js          # Arquivo auxiliar, não carregado pelo deck atual
+├── LICENSE
+└── README.md
+```
 
-## Estado atual
+## Rodar localmente
 
-As confirmações de conteúdo foram incorporadas: cargo, confidencialidade do caso, tempos, faixa HTTP 4xx–5xx e referência do livro. Os números e cenários do slide 22 e da demo estão identificados como ilustrativos. O repositório público contém os arquivos do projeto, e o GitHub Pages está publicado.
+Não há dependências nem etapa de build. Abra `index.html` no navegador ou inicie um servidor estático na pasta do projeto:
 
-## Como editar o `index.html`
+```bash
+python -m http.server 8000
+```
 
-O arquivo tem cerca de 130 KB, mas a edição é simples. Abra-o num editor de texto e use Ctrl+F para achar o trecho que quer mudar.
+Depois, acesse `http://localhost:8000`. Para abrir a apresentação, basta manter `index.html` e a pasta `img/` juntos; para a demo, mantenha `demo.html` na mesma pasta. `style.css` e `deck.js` não são usados pela versão publicada.
 
-- **Texto de um slide.** Cada slide é um bloco `<section class="slide">` até o `</section>` correspondente.
-- **Novo slide.** Copie um bloco `<section class="slide">` inteiro e cole na posição desejada. O contador se ajusta sozinho. Depois, acrescente a nota do novo slide na lista de notas, na mesma posição.
-- **Notas do apresentador.** Ficam na lista `notesBySlide`, perto do fim do arquivo, com uma entrada por slide, na mesma ordem. Hoje são 40. Se a quantidade não bater com a de slides, as notas ficam deslocadas.
-- **Links do material.** Os endereços dos slides, da demo e do repositório ficam no bloco `const LINKS`, perto do fim do arquivo. O QR code aponta para o repositório.
-- **Cores.** Estão no início do `<style>`, em `:root`. `--bg` é o fundo (Noite), `--text` é o texto (Creme), `--lime` é o destaque (Amarelo), `--red` é o Rosa e `--violet` é o Roxo.
-- **Fontes.** Plus Jakarta Sans para textos e títulos, e Fira Code para código. As duas estão embutidas no arquivo, então funcionam sem internet. Não apague os dois blocos `@font-face`.
-- **Id `slide-demo`.** Não renomeie. A demo usa esse id para voltar ao slide certo.
+Os QR codes são gerados por uma biblioteca carregada via CDN e precisam de internet para aparecer. Os respectivos links também estão escritos nos slides.
 
-## Demo (`demo.html`)
+## Demo interativa
 
-A demo simula um reembolso em quatro etapas: `receber_pedido`, `validar_saldo`, `solicitar_reembolso` e `montar_tela`. Cerca de 30% dos pedidos caem em saldo insuficiente, uma regra de negócio tratada. Cerca de 4% caem em erro fora dessa regra, na etapa `solicitar_reembolso`. Os dados são fictícios e gerados ao abrir a página, então cada recarga mostra números diferentes.
+O fluxo simulado passa por `receber_pedido`, `validar_saldo`, `solicitar_reembolso` e `montar_tela`.
 
-| Botão ou campo                  | O que faz                                                                                                                                                                               |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Modo 1 · antes                  | Logs genéricos ("Erro ao processar reembolso"). Nesta simulação, cada falha vira alerta, inclusive a regra de saldo já tratada.                                                         |
-| Modo 2 · depois                 | Logs com `level`, `error_type`, `step` e `business_rule_handled`. Só a regra de negócio tratada não alerta; falhas fora dela, inclusive as desconhecidas, alertam para investigação. |
-| Filtro de `request_id` (modo 2) | Mostra só os logs de um pedido. A caixa sugere os ids com falha.                                                                                                                        |
-| + Gerar mais tráfego            | Adiciona 40 pedidos.                                                                                                                                                                    |
-| ↺ Resetar                       | Limpa o filtro, volta ao modo 1 e gera uma nova rodada de 120 pedidos.                                                                                                                  |
+- **Modo 1 · antes:** logs genéricos; toda falha gera alerta, inclusive saldo insuficiente.
+- **Modo 2 · depois:** logs com `level`, `error_type`, `step` e `business_rule_handled`. Uma regra de negócio tratada (`true`) não alerta; falhas fora dela (`false`), inclusive desconhecidas, alertam para investigação.
+- O filtro encontra eventos por `request_id`. O botão de reset limpa o filtro, volta ao modo 1 e gera uma nova rodada de dados fictícios.
 
-Roteiro sugerido no palco: modo 1, mostrando que tudo alerta. Depois modo 2, mostrando que a regra de negócio tratada não alerta, enquanto falhas fora dela — como o erro desconhecido simulado — acionam investigação. Em seguida, filtrar um `request_id` com falha fora da regra e, por fim, usar o botão "voltar aos slides".
+## Navegação
 
-## Material publicado
+Use as setas, espaço ou Page Up/Page Down. Em celular, também é possível avançar e voltar com gestos. Pressione **N** para mostrar ou esconder as notas do apresentador. O id `slide-demo` deve ser mantido: a demo o usa para voltar ao slide correspondente.
 
-- Slides: [abrir apresentação](https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/)
-- Demo: [abrir demo](https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/demo.html)
-- Código-fonte: [repositório no GitHub](https://github.com/eu-larissasouza/devfest2026-codigo-que-fala)
+## Licença
 
-O slide 2 contém links diretos para os slides e para a demo. O QR code abre o repositório.
+Este repositório inclui uma licença MIT; consulte [`LICENSE`](LICENSE). A licença do conteúdo autoral da apresentação está indicada no slide de referências.
 
-## Requisitos e observações
+## Contato
 
-- Qualquer navegador atual: Chrome, Edge, Firefox ou Safari.
-- Sem internet, a apresentação, as notas e a demo funcionam normalmente. Os QR codes dos slides 2 e 40 dependem da internet; os links também aparecem escritos.
-- No celular e no tablet, o conteúdo dos slides curtos fica centralizado verticalmente; slides longos continuam roláveis.
+- LinkedIn: [in/larissa-a-souza](https://www.linkedin.com/in/larissa-a-souza/)
+- Instagram: [@\_lary.souza.\_](https://instagram.com/_lary.souza._)
+- YouTube: [@lary.souzaa](https://www.youtube.com/@lary.souzaa)
+- GitHub: [eu-larissasouza](https://github.com/eu-larissasouza)
 
-## Antes da palestra
+---
 
-- [ ] Testar no notebook conectado ao projetor, com e sem internet.
-- [ ] Testar a demo na mesma aba e em outra aba.
-- [ ] Ler as notas (tecla N) e cronometrar a apresentação.
-- [ ] Conferir no celular os links publicados e o QR code.
-
-## Solução de problemas
-
-- **A página abre sem cores ou sem fontes.** O `index.html` pode ter sido copiado incompleto. O arquivo deve ter cerca de 130 KB.
-- **A foto do slide 3 não aparece.** Confirme que a pasta `img/` está ao lado do `index.html`.
-- **O botão "Abrir a demo" não funciona.** Confirme que `demo.html` está na mesma pasta do `index.html`.
-- **A demo não volta ao slide certo.** Não renomeie o id `slide-demo` e mantenha os dois arquivos juntos.
+<p align="center">Aprecie cada momento da sua jornada. 💜</p>
