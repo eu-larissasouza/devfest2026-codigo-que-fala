@@ -544,6 +544,10 @@
         font-size: 0.98rem;
         line-height: 1.5;
       }
+      .slide-checklist ul.plain li {
+        margin-bottom: 0.8rem;
+        font-size: clamp(1.08rem, 1.45vw, 1.3rem);
+      }
       ul.plain.emphasis-list li {
         font-size: clamp(1.08rem, 1.45vw, 1.22rem);
         margin-bottom: 0.8rem;
@@ -804,6 +808,16 @@
       .slide-capa {
         background:
           radial-gradient(
+            ellipse 44% 40% at 88% 78%,
+            rgba(245, 135, 59, 0.34),
+            transparent 70%
+          ),
+          radial-gradient(
+            ellipse 32% 28% at 94% 82%,
+            rgba(255, 210, 122, 0.24),
+            transparent 68%
+          ),
+          radial-gradient(
             1100px 760px at 90% -8%,
             rgba(106, 43, 219, 0.45),
             transparent 60%
@@ -849,6 +863,12 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+      }
+      @media (min-width: 861px) {
+        .slide-question h2 {
+          font-size: clamp(2.8rem, 4.2vw, 3.55rem);
+          line-height: 1.1;
+        }
       }
       .capa-rule {
         display: flex;
@@ -1011,7 +1031,7 @@
           min-height: 100svh;
           height: auto;
           padding: 4.5rem 6vw 6rem;
-          justify-content: flex-start;
+          justify-content: safe center;
           overflow: visible;
           opacity: 1;
           visibility: visible;
@@ -1563,7 +1583,61 @@
         </p>
       </section>
 
-      <!-- 02 QUEM SOU EU -->
+      <!-- 02 MATERIAL -->
+      <section class="slide">
+        <div class="eyebrow c-blue">Material completo e código interativo</div>
+        <h2>Acesse <span style="color: var(--lime)">o material</span></h2>
+        <p class="sub">
+          A apresentação e a demo estão disponíveis online. O repositório reúne
+          os arquivos do projeto.
+        </p>
+        <div
+          class="resource-list"
+          style="
+            grid-template-columns: 1fr;
+            max-width: 760px;
+            margin-top: 1.8rem;
+          "
+        >
+          <div class="resource-row">
+            <div
+              class="resource-qr"
+              id="repo-qr"
+              role="img"
+              aria-label="QR code para o repositório do projeto"
+            ></div>
+            <div class="resource-info">
+              <h3 style="font-size: 1.15rem; margin-bottom: 0.3rem">
+                Slides, demo e código
+              </h3>
+              <p class="sub" style="margin-top: 0; font-size: 0.95rem">
+                <a
+                  class="go-demo resource-link"
+                  data-link="slides"
+                  style="color: var(--lime)"
+                  >Apresentação online</a
+                >
+                ·
+                <a
+                  class="go-demo resource-link"
+                  data-link="demo"
+                  style="color: var(--violet-light)"
+                  >Demo interativa</a
+                >
+                ·
+                <a
+                  class="go-demo resource-link"
+                  data-link="repo"
+                  style="color: var(--tdc-orange)"
+                  >Código no GitHub</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 QUEM SOU EU -->
       <section class="slide slide-bio">
         <div class="bio-side">
           <div class="bio-avatar">
@@ -1614,7 +1688,7 @@
         </div>
       </section>
 
-      <!-- 03 ROTEIRO -->
+      <!-- 04 ROTEIRO -->
       <section class="slide">
         <div class="eyebrow c-blue">O roteiro</div>
         <h2>
@@ -1671,8 +1745,8 @@
         </p>
       </section>
 
-      <!-- 04 PERGUNTA -->
-      <section class="slide">
+      <!-- 05 PERGUNTA -->
+      <section class="slide slide-question">
         <div class="eyebrow c-red">Para começar</div>
         <h2>
           Quem aqui já teve um bug em produção e
@@ -1683,7 +1757,7 @@
         </p>
       </section>
 
-      <!-- 05 PALAVRAS SIMPLES -->
+      <!-- 06 PALAVRAS SIMPLES -->
       <section class="slide">
         <div class="eyebrow c-yellow">Sem jargão</div>
         <h2>Quatro palavras que vamos usar</h2>
@@ -1713,7 +1787,7 @@
         </div>
       </section>
 
-      <!-- 06 BLOCO 1: UM CLIENTE SEM SALDO -->
+      <!-- 07 BLOCO 1: UM CLIENTE SEM SALDO -->
       <section class="slide">
         <div class="eyebrow c-red">01 · A história</div>
         <h2>
@@ -1745,7 +1819,7 @@
         </p>
       </section>
 
-      <!-- 07 O QUE O CLIENTE VIA -->
+      <!-- 08 O QUE O CLIENTE VIA -->
       <section class="slide">
         <div class="eyebrow c-red">01 · A história</div>
         <h2>
@@ -1771,7 +1845,7 @@
         </div>
       </section>
 
-      <!-- 08 A CAUSA -->
+      <!-- 09 A CAUSA -->
       <section class="slide">
         <div class="eyebrow c-orange">01 · A história</div>
         <h2>
@@ -1809,7 +1883,7 @@
         </p>
       </section>
 
-      <!-- 09 HOTFIX -->
+      <!-- 10 HOTFIX -->
       <section class="slide">
         <div class="eyebrow c-orange">01 · A história</div>
         <h2>
@@ -1842,7 +1916,7 @@
         </p>
       </section>
 
-      <!-- 10 APRENDIZADO 1 -->
+      <!-- 11 APRENDIZADO 1 -->
       <section class="slide" id="lesson-1">
         <div class="lesson-num">01 / 05 · A HISTÓRIA</div>
         <p class="big-lesson">
@@ -1851,7 +1925,7 @@
         </p>
       </section>
 
-      <!-- 11 BLOCO 2: LOG É MENSAGEM -->
+      <!-- 12 BLOCO 2: LOG É MENSAGEM -->
       <section class="slide">
         <div class="eyebrow c-blue">02 · O que logar</div>
         <h2>
@@ -1889,7 +1963,7 @@
         </p>
       </section>
 
-      <!-- 12 RUIM x BOM -->
+      <!-- 13 RUIM x BOM -->
       <section class="slide">
         <div class="eyebrow c-blue">02 · O que logar</div>
         <h2>Mesmo evento, <span style="color: var(--lime)">dois logs</span></h2>
@@ -1919,7 +1993,7 @@
         </div>
       </section>
 
-      <!-- 13 QUATRO PERGUNTAS -->
+      <!-- 14 QUATRO PERGUNTAS -->
       <section class="slide">
         <div class="eyebrow c-blue">02 · O que logar</div>
         <h2>
@@ -1954,7 +2028,7 @@
         </p>
       </section>
 
-      <!-- 14 CONTEXTO SEM EXPOR -->
+      <!-- 15 CONTEXTO SEM EXPOR -->
       <section class="slide">
         <div class="eyebrow c-yellow">02 · O que logar</div>
         <h2>
@@ -1978,7 +2052,7 @@
         </p>
       </section>
 
-      <!-- 15 UM ID QUE ATRAVESSA -->
+      <!-- 16 UM ID QUE ATRAVESSA -->
       <section class="slide">
         <div class="eyebrow c-blue">02 · O que logar</div>
         <h2>
@@ -1999,7 +2073,7 @@
         </p>
       </section>
 
-      <!-- 16 REGRA DE NEGÓCIO TRATADA x ERRO A INVESTIGAR -->
+      <!-- 17 REGRA DE NEGÓCIO TRATADA x ERRO A INVESTIGAR -->
       <section class="slide">
         <div class="eyebrow c-blue">02 · O que logar</div>
         <h2>
@@ -2041,7 +2115,7 @@
         </p>
       </section>
 
-      <!-- 17 APRENDIZADO 2 -->
+      <!-- 18 APRENDIZADO 2 -->
       <section class="slide" id="lesson-2">
         <div class="lesson-num">02 / 05 · O QUE LOGAR</div>
         <p class="big-lesson">
@@ -2051,7 +2125,7 @@
         </p>
       </section>
 
-      <!-- 18 BLOCO 3: SINTOMA x CAUSA -->
+      <!-- 19 BLOCO 3: SINTOMA x CAUSA -->
       <section class="slide">
         <div class="eyebrow c-orange">03 · O que medir</div>
         <h2>O que <span style="color: var(--lime)">quebrou</span> e por quê</h2>
@@ -2075,7 +2149,7 @@
         </p>
       </section>
 
-      <!-- 19 QUATRO SINAIS -->
+      <!-- 20 QUATRO SINAIS -->
       <section class="slide">
         <div class="eyebrow c-orange">03 · O que medir</div>
         <h2>Quatro sinais <span style="color: var(--lime)">de ouro</span></h2>
@@ -2107,7 +2181,7 @@
         </p>
       </section>
 
-      <!-- 20 A MÉDIA ENGANA -->
+      <!-- 21 A MÉDIA ENGANA -->
       <section class="slide">
         <div class="eyebrow c-orange">03 · O que medir</div>
         <h2>A média <span style="color: var(--lime)">engana</span></h2>
@@ -2154,7 +2228,7 @@
         </p>
       </section>
 
-      <!-- 21 MÉTRICA POR ETAPA E TIPO -->
+      <!-- 22 MÉTRICA POR ETAPA E TIPO -->
       <section class="slide">
         <div class="eyebrow c-orange">03 · O que medir</div>
         <h2>
@@ -2196,7 +2270,7 @@
         </p>
       </section>
 
-      <!-- 22 APRENDIZADO 3 -->
+      <!-- 23 APRENDIZADO 3 -->
       <section class="slide" id="lesson-3">
         <div class="lesson-num">03 / 05 · O QUE MEDIR</div>
         <p class="big-lesson">
@@ -2206,7 +2280,7 @@
         </p>
       </section>
 
-      <!-- 23 BLOCO 4: ALERTA É PROMESSA -->
+      <!-- 24 BLOCO 4: ALERTA É PROMESSA -->
       <section class="slide">
         <div class="eyebrow c-yellow">04 · Quando alertar</div>
         <h2>Alerta é uma <span style="color: var(--lime)">promessa</span></h2>
@@ -2237,7 +2311,7 @@
         </p>
       </section>
 
-      <!-- 24 O ALERTA QUE TOCAVA ATÉ PARA ERRO TRATADO -->
+      <!-- 25 O ALERTA QUE TOCAVA ATÉ PARA ERRO TRATADO -->
       <section class="slide">
         <div class="eyebrow c-red">04 · Quando alertar</div>
         <h2>
@@ -2277,7 +2351,7 @@
         </p>
       </section>
 
-      <!-- 25 ALERTE NO SINTOMA -->
+      <!-- 26 ALERTE NO SINTOMA -->
       <section class="slide">
         <div class="eyebrow c-yellow">04 · Quando alertar</div>
         <h2>Alerte no <span style="color: var(--lime)">sintoma</span></h2>
@@ -2306,7 +2380,7 @@
         </p>
       </section>
 
-      <!-- 26 TODA PÁGINA É ACIONÁVEL -->
+      <!-- 27 TODA PÁGINA É ACIONÁVEL -->
       <section class="slide">
         <div class="eyebrow c-yellow">04 · Quando alertar</div>
         <h2>
@@ -2333,7 +2407,7 @@
         </p>
       </section>
 
-      <!-- 27 SLO -->
+      <!-- 28 SLO -->
       <section class="slide">
         <div class="eyebrow c-yellow">04 · Quando alertar</div>
         <h2>
@@ -2372,7 +2446,7 @@
         </p>
       </section>
 
-      <!-- 28 APRENDIZADO 4 -->
+      <!-- 29 APRENDIZADO 4 -->
       <section class="slide" id="lesson-4">
         <div class="lesson-num">04 / 05 · QUANDO ALERTAR</div>
         <p class="big-lesson">
@@ -2382,7 +2456,7 @@
         </p>
       </section>
 
-      <!-- 29 BLOCO 5: DEMO -->
+      <!-- 30 BLOCO 5: DEMO -->
       <!-- TODO(Lary): antes da palestra, testar a demo no notebook conectado ao projetor, com e sem internet. Os dados da demo são simulados. -->
       <section class="slide" id="slide-demo">
         <div class="eyebrow c-red">05 · Demo ao vivo</div>
@@ -2431,7 +2505,7 @@
         </p>
       </section>
 
-      <!-- 30 DESFECHO: DA HISTÓRIA AOS 15 MINUTOS -->
+      <!-- 31 DESFECHO: DA HISTÓRIA AOS 15 MINUTOS -->
       <section class="slide">
         <div class="eyebrow c-orange">05 · Voltando à história</div>
         <h2>
@@ -2469,7 +2543,7 @@
         </p>
       </section>
 
-      <!-- 31 INVESTIGAR SEM CHUTAR -->
+      <!-- 32 INVESTIGAR SEM CHUTAR -->
       <section class="slide">
         <div class="eyebrow c-orange">05 · Dicas do livro</div>
         <h2>Investigar <span style="color: var(--lime)">sem chutar</span></h2>
@@ -2509,7 +2583,7 @@
         </p>
       </section>
 
-      <!-- 32 POSTMORTEM SEM CULPA -->
+      <!-- 33 POSTMORTEM SEM CULPA -->
       <section class="slide">
         <div class="eyebrow c-orange">05 · Dicas do livro</div>
         <h2>Postmortem <span style="color: var(--lime)">sem culpa</span></h2>
@@ -2531,7 +2605,7 @@
         </p>
       </section>
 
-      <!-- 33 APRENDIZADO 5 -->
+      <!-- 34 APRENDIZADO 5 -->
       <section class="slide" id="lesson-5">
         <div class="lesson-num">05 / 05 · DESFECHO</div>
         <p class="big-lesson">
@@ -2540,7 +2614,7 @@
         </p>
       </section>
 
-      <!-- 34 RECAPITULANDO -->
+      <!-- 35 RECAPITULANDO -->
       <section class="slide">
         <div class="eyebrow c-blue">Recapitulando</div>
         <h2>Os 5 aprendizados</h2>
@@ -2597,7 +2671,7 @@
         </ol>
       </section>
 
-      <!-- 35 ANTES E DEPOIS -->
+      <!-- 36 ANTES E DEPOIS -->
       <section class="slide">
         <div class="eyebrow c-orange">Para levar</div>
         <h2>
@@ -2629,8 +2703,8 @@
         </div>
       </section>
 
-      <!-- 36 CHECKLIST DE BOLSO -->
-      <section class="slide">
+      <!-- 37 CHECKLIST DE BOLSO -->
+      <section class="slide slide-checklist">
         <div class="eyebrow c-yellow">Para levar</div>
         <h2>Checklist <span style="color: var(--lime)">de bolso</span></h2>
         <div class="grid cols-2" style="margin-top: 1.4rem">
@@ -2652,7 +2726,7 @@
         <p class="sub" style="margin-top: 1.6rem">Fotografe este slide.</p>
       </section>
 
-      <!-- 37 REFERÊNCIAS -->
+      <!-- 38 REFERÊNCIAS -->
       <section class="slide">
         <div class="eyebrow c-blue">Referências</div>
         <h2>Leitura <span style="color: var(--lime)">para estudar</span></h2>
@@ -2674,39 +2748,6 @@
           com o fracasso). Texto
           próprio, sem reproduzir trechos do livro (CC BY-NC-ND 4.0).
         </p>
-      </section>
-
-      <!-- 38 MATERIAL -->
-      <section class="slide">
-        <div class="eyebrow c-blue">Projeto no GitHub</div>
-        <h2>Acesse <span style="color: var(--lime)">o repositório</span></h2>
-        <p class="sub">
-          Use o link ou escaneie o QR code para chegar ao repositório do projeto.
-        </p>
-        <div class="resource-list" style="margin-top: 1.8rem">
-          <div class="resource-row">
-            <div class="resource-qr" id="repo-qr"></div>
-            <div class="resource-info">
-              <h3 style="font-size: 1.15rem; margin-bottom: 0.3rem">
-                Repositório do projeto
-              </h3>
-              <p
-                class="sub"
-                style="
-                  margin-top: 0;
-                  font-family: var(--mono);
-                  font-size: 0.9rem;
-                "
-              >
-                <a
-                  class="go-demo resource-link"
-                  data-link="repo"
-                  style="color: var(--lime)"
-                ></a>
-              </p>
-            </div>
-          </div>
-        </div>
       </section>
 
       <!-- 39 FECHAMENTO: ATENÇÃO AO CLIENTE -->
@@ -2765,18 +2806,55 @@
           >
           Bora se conectar?!
         </p>
+        <p class="sub" style="font-size: clamp(1.05rem, 1.6vw, 1.25rem)">
+          Escaneie o QR code ou abra meu perfil no LinkedIn:
+        </p>
+        <div
+          class="resource-list"
+          style="grid-template-columns: 1fr; margin-top: 1.2rem"
+        >
+          <div class="resource-row">
+            <div
+              class="resource-qr"
+              id="linkedin-qr"
+              role="img"
+              aria-label="QR code para o perfil de Larissa Souza no LinkedIn"
+            ></div>
+            <div class="resource-info">
+              <p
+                class="sub"
+                style="
+                  margin-top: 0;
+                  font-family: var(--mono);
+                  max-width: none;
+                "
+              >
+                <a
+                  class="go-demo resource-link"
+                  data-link="linkedin"
+                  style="color: var(--violet-light)"
+                  aria-label="Abrir perfil de Larissa Souza no LinkedIn"
+                  >Perfil no LinkedIn</a
+                >
+              </p>
+              <p class="sub" style="margin-top: 0.4rem; max-width: none">
+                Larissa Souza · Software Engineer
+              </p>
+            </div>
+          </div>
+        </div>
         <p
           class="sub"
           style="
-            margin-top: 1.8rem;
+            margin-top: 1rem;
             color: var(--text);
             font-family: var(--mono);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             line-height: 1.8;
           "
         >
-          Instagram: @_lary.souza_ · LinkedIn: in/larissa-a-souza<br />
-          GitHub: eu-larissasouza · YouTube: @lary.souzaa
+          Instagram: @_lary.souza_ · GitHub: eu-larissasouza · YouTube:
+          @lary.souzaa
         </p>
       </section>
     </div>
@@ -2796,9 +2874,12 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script>
-      // Link do repositório usado no slide 38 e no QR code.
+      // Links do material e do perfil; cada QR code abre seu destino.
       const LINKS = {
-        repo: 'https://github.com/eu-larissasouza/devfest2026-codigo-que-fala'
+        slides: 'https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/',
+        demo: 'https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/demo.html',
+        repo: 'https://github.com/eu-larissasouza/devfest2026-codigo-que-fala',
+        linkedin: 'https://www.linkedin.com/in/larissa-a-souza'
       }
 
       document.querySelectorAll('[data-link]').forEach(el => {
@@ -2807,7 +2888,7 @@
           el.href = url
           el.target = '_blank'
           el.rel = 'noopener noreferrer'
-          el.textContent = url.replace(/^https?:\/\//, '')
+          el.textContent = el.textContent.trim() || url.replace(/^https?:\/\//, '')
         } else {
           el.textContent = 'em breve'
           el.style.opacity = '0.6'
@@ -2817,6 +2898,17 @@
       if (window.QRCode && LINKS.repo) {
         new QRCode(document.getElementById('repo-qr'), {
           text: LINKS.repo,
+          width: 112,
+          height: 112,
+          colorDark: '#17122E',
+          colorLight: '#ffffff',
+          correctLevel: QRCode.CorrectLevel.M
+        })
+      }
+
+      if (window.QRCode && LINKS.linkedin) {
+        new QRCode(document.getElementById('linkedin-qr'), {
+          text: LINKS.linkedin,
           width: 112,
           height: 112,
           colorDark: '#17122E',
@@ -2843,6 +2935,7 @@
       // Notas do apresentador: uma por slide, na mesma ordem dos slides (são 40). Tecla N mostra e esconde.
       const notesBySlide = [
         'Capa. Respirar e deixar 3 segundos de silêncio antes do título.',
+        'Material e código: mostrar os links dos slides e da demo; o QR code aponta para o repositório.',
         'Quem sou eu. Contar de cabeça, sem ler a lista.',
         'Roteiro: os 5 blocos. Avisar que cada bloco termina com um aprendizado.',
         'Pergunta para a sala. Esperar as mãos levantarem.',
@@ -2879,9 +2972,8 @@
         'Antes e depois. Terminar pela coluna do cliente, que não muda.',
         'Checklist de bolso. Pedir para fotografar.',
         'Referências. Citar a versão gratuita do livro.',
-        'Material: QR code do repositório. Esperar as pessoas escanearem.',
         'Fechamento: atenção ao cliente é reputação. Silêncio de 2 a 3 segundos antes de ler.',
-        'Agradecer e abrir para perguntas.'
+        'Agradecer, mostrar o QR code do LinkedIn e abrir para perguntas.'
       ]
 
       const scrubber = document.getElementById('scrubber')
