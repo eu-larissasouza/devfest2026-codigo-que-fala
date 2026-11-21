@@ -33,6 +33,13 @@ Palestra programada para 28/11/2026, na FIAP Paulista, como parte do DevFest Sã
 - **Demo interativa:** [abrir a demo](https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/demo.html)
 - **Código-fonte:** [eu-larissasouza/devfest2026-codigo-que-fala](https://github.com/eu-larissasouza/devfest2026-codigo-que-fala)
 
+## 📸 Prévia
+
+| Apresentação | Demo interativa |
+| --- | --- |
+| [![Slide de abertura](screenshots/slides-preview.png)](https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/) | [![Prévia da demo](screenshots/demo-preview.png)](https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/demo.html) |
+| [👉 Abrir os slides](https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/) | [👉 Abrir a demo](https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/demo.html) |
+
 ## O material
 
 - **40 slides** com navegação por teclado, clique e gesto em telas sensíveis ao toque.
@@ -48,6 +55,9 @@ devfest-codigo-que-fala/
 ├── index.html       # Slides; estilos e navegação embutidos
 ├── demo.html        # Demo interativa
 ├── img/             # Foto, favicon e elementos visuais
+├── screenshots/     # Prévia dos slides e da demo
+│   ├── slides-preview.png
+│   └── demo-preview.png
 ├── style.css        # Arquivo auxiliar, não carregado pelo deck atual
 ├── deck.js          # Arquivo auxiliar, não carregado pelo deck atual
 ├── LICENSE
