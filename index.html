@@ -86,12 +86,17 @@
         width: 100vw;
         height: 100vh;
       }
+      @media (min-width: 861px) {
+        html {
+          font-size: 125%;
+        }
+      }
       .slide {
         position: absolute;
         inset: 0;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: safe center;
         padding: 6vh 9vw calc(12vh + 2.5rem) 9vw;
         overflow-x: hidden;
         overflow-y: auto;
@@ -954,10 +959,10 @@
       }
       .resource-qr {
         background: #fff;
-        padding: 10px;
-        border-radius: 12px;
-        width: 132px;
-        height: 132px;
+        padding: 0.625rem;
+        border-radius: 0.75rem;
+        width: 8.25rem;
+        height: 8.25rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -966,6 +971,7 @@
       }
       .resource-qr canvas,
       .resource-qr img {
+        width: 7rem;
         max-width: 100%;
         height: auto;
       }
@@ -1211,14 +1217,14 @@
         .slide-cover,
         .slide-final,
         .quote-slide {
-          justify-content: center;
+          justify-content: safe center;
         }
         #lesson-1,
         #lesson-2,
         #lesson-3,
         #lesson-4,
         #lesson-5 {
-          justify-content: center;
+          justify-content: safe center;
         }
         .slide-cover .trilha-chip {
           font-size: 0.54rem;
