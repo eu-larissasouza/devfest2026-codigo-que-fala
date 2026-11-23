@@ -86,11 +86,6 @@
         width: 100vw;
         height: 100vh;
       }
-      @media (min-width: 861px) {
-        html {
-          font-size: 125%;
-        }
-      }
       .slide {
         position: absolute;
         inset: 0;
@@ -1992,8 +1987,8 @@
 <span class="tok">request_id</span>=<span style="color: #FF8AC4">"a7f3c2"</span> <span class="tok">duration_ms</span>=2310
 <span class="tok">error_type</span>=<span style="color: #FF8AC4">"unknown_error"</span> <span class="tok">business_rule_handled</span>=<span style="color: #FF8A8A">false</span></pre>
             <p class="sub" style="margin-top: 1rem">
-              Quem, onde, quanto e se a falha está coberta por uma regra tratada.
-              Dá para investigar sem adivinhar.
+              Quem, onde, quanto e se a falha está coberta por uma regra
+              tratada. Dá para investigar sem adivinhar.
             </p>
           </div>
         </div>
@@ -2325,17 +2320,15 @@
           <span style="color: var(--lime)">erro tratado</span>
         </h2>
         <p class="sub">
-          O monitor antigo cobria a faixa HTTP 4xx–5xx. Até uma resposta de
-          erro de negócio já tratado, como saldo insuficiente, podia gerar
-          alerta.
+          O monitor antigo cobria a faixa HTTP 4xx–5xx. Até uma resposta de erro
+          de negócio já tratado, como saldo insuficiente, podia gerar alerta.
         </p>
         <div class="grid cols-2" style="margin-top: 1.6rem">
           <div class="card c-red">
             <h3>Antes</h3>
             <p>
-              O monitor cobria a faixa inteira de respostas HTTP 4xx–5xx.
-              Assim, até uma regra de negócio tratada podia gerar falso
-              positivo.
+              O monitor cobria a faixa inteira de respostas HTTP 4xx–5xx. Assim,
+              até uma regra de negócio tratada podia gerar falso positivo.
             </p>
           </div>
           <div class="card c-blue">
@@ -2748,11 +2741,11 @@
           <li>MARTIN, Robert C. <i>Código Limpo</i>.</li>
         </ul>
         <p class="sub" style="margin-top: 1.2rem; font-size: 0.9rem">
-          Capítulos citados: 4 (Objetivos do nível de serviço), 6
-          (Monitorando sistemas distribuídos), 11 (De plantão), 12 (Resolvendo
-          problemas de modo eficiente) e 15 (Cultura de postmortem: aprendendo
-          com o fracasso). Texto
-          próprio, sem reproduzir trechos do livro (CC BY-NC-ND 4.0).
+          Capítulos citados: 4 (Objetivos do nível de serviço), 6 (Monitorando
+          sistemas distribuídos), 11 (De plantão), 12 (Resolvendo problemas de
+          modo eficiente) e 15 (Cultura de postmortem: aprendendo com o
+          fracasso). Texto próprio, sem reproduzir trechos do livro (CC BY-NC-ND
+          4.0).
         </p>
       </section>
 
@@ -2829,11 +2822,7 @@
             <div class="resource-info">
               <p
                 class="sub"
-                style="
-                  margin-top: 0;
-                  font-family: var(--mono);
-                  max-width: none;
-                "
+                style="margin-top: 0; font-family: var(--mono); max-width: none"
               >
                 <a
                   class="go-demo resource-link"
@@ -2882,7 +2871,8 @@
     <script>
       // Links do material e do perfil; cada QR code abre seu destino.
       const LINKS = {
-        slides: 'https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/',
+        slides:
+          'https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/',
         demo: 'https://eu-larissasouza.github.io/devfest2026-codigo-que-fala/demo.html',
         repo: 'https://github.com/eu-larissasouza/devfest2026-codigo-que-fala',
         linkedin: 'https://www.linkedin.com/in/larissa-a-souza'
@@ -2894,7 +2884,8 @@
           el.href = url
           el.target = '_blank'
           el.rel = 'noopener noreferrer'
-          el.textContent = el.textContent.trim() || url.replace(/^https?:\/\//, '')
+          el.textContent =
+            el.textContent.trim() || url.replace(/^https?:\/\//, '')
         } else {
           el.textContent = 'em breve'
           el.style.opacity = '0.6'
