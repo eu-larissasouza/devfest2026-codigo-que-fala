@@ -544,10 +544,6 @@
         font-size: 0.98rem;
         line-height: 1.5;
       }
-      .slide-checklist ul.plain li {
-        margin-bottom: 0.8rem;
-        font-size: clamp(1.08rem, 1.45vw, 1.3rem);
-      }
       ul.plain.emphasis-list li {
         font-size: clamp(1.08rem, 1.45vw, 1.22rem);
         margin-bottom: 0.8rem;
@@ -600,9 +596,6 @@
       #lesson-4 .lesson-num::after {
         background-image: url('img/deploy-creme.svg');
       }
-      #lesson-5 .lesson-num::after {
-        background-image: url('img/jornada-creme.svg');
-      }
 
       .quote-slide .closing-quote {
         max-width: 42ch;
@@ -611,7 +604,7 @@
         line-height: 1.35;
       }
 
-      /* Agenda (roteiro inicial e recap final dos 5 aprendizados) */
+      /* Agenda inicial e recap final dos aprendizados */
       .agenda {
         list-style: none;
         margin: 1.6rem 0 0;
@@ -1217,8 +1210,7 @@
         #lesson-1,
         #lesson-2,
         #lesson-3,
-        #lesson-4,
-        #lesson-5 {
+        #lesson-4 {
           justify-content: safe center;
         }
         .slide-cover .trilha-chip {
@@ -1519,6 +1511,14 @@
         body {
           overflow-x: hidden;
         }
+        .slide-metric-intro .mbar {
+          grid-template-columns: 2.8rem minmax(0, 1fr) 1.5rem;
+          gap: 0.45rem;
+          font-size: 0.78rem;
+        }
+        .slide-metric-intro .mbar b {
+          text-align: right;
+        }
         .slide .deco-circle {
           display: none;
         }
@@ -1693,7 +1693,7 @@
       <section class="slide">
         <div class="eyebrow c-blue">O roteiro</div>
         <h2>
-          5 aprendizados,
+          4 aprendizados,
           <span style="color: var(--lime)">um fio condutor</span>
         </h2>
         <ol class="agenda">
@@ -1742,7 +1742,7 @@
           </li>
         </ol>
         <p class="sub" style="margin-top: 1.4rem">
-          Cada bloco termina com um aprendizado. No fim, voltamos ao roteiro.
+          Quatro ideias, um caso e uma demo; no fim, juntamos os aprendizados.
         </p>
       </section>
 
@@ -1820,18 +1820,19 @@
         </p>
       </section>
 
-      <!-- 08 O QUE O CLIENTE VIA -->
+      <!-- 08 A TELA ERRADA REVELA A CAUSA -->
       <section class="slide">
         <div class="eyebrow c-red">01 · A história</div>
         <h2>
-          A tela <span style="color: var(--lime)">certa</span> não apareceu
+          A tela errada <span style="color: var(--lime)">revela a causa</span>
         </h2>
         <p class="sub">
-          Pelos rastros da tela e do fluxo, descobrimos o que o cliente via.
+          A tela genérica era o sintoma; uma mudança de contrato fez o sistema
+          deixar de reconhecer o caso.
         </p>
         <div class="grid cols-2" style="margin-top: 1.6rem">
           <div class="card c-blue">
-            <h3>O esperado</h3>
+            <h3>O que deveria aparecer</h3>
             <p>
               Uma mensagem configurada para saldo insuficiente, com a orientação
               certa.
@@ -1840,51 +1841,21 @@
           <div class="card c-red">
             <h3>O que aparecia</h3>
             <p>
-              Uma tela de erro genérica. Ou seja: havia um problema no sistema.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- 09 A CAUSA -->
-      <section class="slide">
-        <div class="eyebrow c-orange">01 · A história</div>
-        <h2>
-          A causa:
-          <span style="color: var(--lime)">uma mudança de contrato</span>
-        </h2>
-        <div class="concept-row" style="margin-top: 1.6rem">
-          <div class="concept-card">
-            <span class="icon">◆</span>
-            <h3>O que mudou</h3>
-            <p>
-              Após uma mudança de contrato, o sistema deixou de reconhecer o
-              caso de saldo insuficiente.
-            </p>
-          </div>
-          <div
-            class="concept-card"
-            style="border-color: rgba(245, 135, 59, 0.45)"
-          >
-            <span class="icon">◆</span>
-            <h3>O que faltou</h3>
-            <p>
-              Sem reconhecer o caso, o tratamento configurado para ele não era
-              exibido.
+              Uma tela de erro genérica: o sistema não reconhecia mais a regra
+              depois da mudança de contrato.
             </p>
           </div>
         </div>
         <p class="sub" style="margin-top: 1.4rem">
-          Sintoma: a tela genérica, que o cliente sente. Causa: o contrato, que
-          explica.
+          Sintoma é o que o cliente sente; causa é o que explica.
         </p>
         <p class="sub" style="margin-top: 0.8rem; font-size: 0.9rem">
-          Livro, cap. 12 (Effective Troubleshooting): pergunte o que mudou por
-          último. Mudanças recentes são um bom ponto de partida.
+          Comece pelo que mudou por último: mudanças recentes são um bom ponto
+          de partida.
         </p>
       </section>
 
-      <!-- 10 HOTFIX -->
+      <!-- 09 HOTFIX -->
       <section class="slide">
         <div class="eyebrow c-orange">01 · A história</div>
         <h2>
@@ -1917,16 +1888,16 @@
         </p>
       </section>
 
-      <!-- 11 APRENDIZADO 1 -->
+      <!-- 10 APRENDIZADO 1 -->
       <section class="slide" id="lesson-1">
-        <div class="lesson-num">01 / 05 · A HISTÓRIA</div>
+        <div class="lesson-num">01 / 04 · A HISTÓRIA</div>
         <p class="big-lesson">
           Uma regra conhecida que não aparece na tela
           <span style="color: var(--lime)">vira problema de sistema.</span>
         </p>
       </section>
 
-      <!-- 12 BLOCO 2: LOG É MENSAGEM -->
+      <!-- 11 BLOCO 2: LOG É MENSAGEM -->
       <section class="slide">
         <div class="eyebrow c-blue">02 · O que logar</div>
         <h2>
@@ -1964,7 +1935,7 @@
         </p>
       </section>
 
-      <!-- 13 RUIM x BOM -->
+      <!-- 12 RUIM x BOM -->
       <section class="slide">
         <div class="eyebrow c-blue">02 · O que logar</div>
         <h2>Mesmo evento, <span style="color: var(--lime)">dois logs</span></h2>
@@ -1994,42 +1965,7 @@
         </div>
       </section>
 
-      <!-- 14 QUATRO PERGUNTAS -->
-      <section class="slide">
-        <div class="eyebrow c-blue">02 · O que logar</div>
-        <h2>
-          Um bom log responde
-          <span style="color: var(--lime)">quatro perguntas</span>
-        </h2>
-        <div class="grid cols-2" style="margin-top: 1.6rem">
-          <div class="card">
-            <span class="num">1</span>
-            <h3 style="margin-top: 0.4rem">O que aconteceu?</h3>
-            <p>Uma frase clara, sem código de erro misterioso.</p>
-          </div>
-          <div class="card c-orange">
-            <span class="num">2</span>
-            <h3 style="margin-top: 0.4rem">Com qual pedido?</h3>
-            <p>Um identificador que permite seguir a história inteira.</p>
-          </div>
-          <div class="card c-yellow">
-            <span class="num">3</span>
-            <h3 style="margin-top: 0.4rem">Em qual etapa?</h3>
-            <p>Onde o fluxo parou, e não apenas que ele parou.</p>
-          </div>
-          <div class="card c-red">
-            <span class="num">4</span>
-            <h3 style="margin-top: 0.4rem">Quanto tempo e por quê?</h3>
-            <p>Duração e motivo. É isso que encurta a investigação.</p>
-          </div>
-        </div>
-        <p class="sub" style="margin-top: 1.4rem; font-size: 0.9rem">
-          Livro, cap. 12: aumente o nível de detalhe só quando precisar, e volte
-          ao normal depois.
-        </p>
-      </section>
-
-      <!-- 15 CONTEXTO SEM EXPOR -->
+      <!-- 13 CONTEXTO SEM EXPOR -->
       <section class="slide">
         <div class="eyebrow c-yellow">02 · O que logar</div>
         <h2>
@@ -2053,7 +1989,7 @@
         </p>
       </section>
 
-      <!-- 16 UM ID QUE ATRAVESSA -->
+      <!-- 14 UM ID QUE ATRAVESSA -->
       <section class="slide">
         <div class="eyebrow c-blue">02 · O que logar</div>
         <h2>
@@ -2074,7 +2010,7 @@
         </p>
       </section>
 
-      <!-- 17 REGRA DE NEGÓCIO TRATADA x ERRO A INVESTIGAR -->
+      <!-- 15 REGRA DE NEGÓCIO TRATADA x ERRO A INVESTIGAR -->
       <section class="slide">
         <div class="eyebrow c-blue">02 · O que logar</div>
         <h2>
@@ -2116,9 +2052,9 @@
         </p>
       </section>
 
-      <!-- 18 APRENDIZADO 2 -->
+      <!-- 16 APRENDIZADO 2 -->
       <section class="slide" id="lesson-2">
-        <div class="lesson-num">02 / 05 · O QUE LOGAR</div>
+        <div class="lesson-num">02 / 04 · O QUE LOGAR</div>
         <p class="big-lesson">
           Log bom responde
           <span style="color: var(--lime)">quem, onde, quanto e por quê.</span>
@@ -2126,79 +2062,71 @@
         </p>
       </section>
 
-      <!-- 19 BLOCO 3: SINTOMA x CAUSA -->
-      <section class="slide">
+      <!-- 17 DO LOG À MÉTRICA -->
+      <section class="slide slide-metric-intro">
         <div class="eyebrow c-orange">03 · O que medir</div>
-        <h2>O que <span style="color: var(--lime)">quebrou</span> e por quê</h2>
-        <div class="diagram-row" style="margin-top: 1.6rem">
-          <div class="node" style="border-top-color: var(--tdc-red)">
-            <b>Sintoma</b>o que o usuário percebe<br />"o reembolso não conclui"
-          </div>
-          <span class="arrow">→</span>
-          <div class="node" style="border-top-color: var(--tdc-yellow)">
-            <b>Causa</b>por que aconteceu<br />"o contrato mudou e o caso não
-            foi reconhecido"
-          </div>
-        </div>
-        <p class="sub" style="margin-top: 0.8rem">
-          Monitore primeiro o sintoma: é ele que dói para o usuário. A causa
-          ajuda a investigar depois.
+        <h2>
+          Log mostra um caso.
+          <span style="color: var(--lime)">Métrica mostra o padrão.</span>
+        </h2>
+        <p class="sub">
+          Métrica é um número acompanhado ao longo do tempo: mostra se algo está
+          se repetindo ou piorando.
         </p>
-        <p class="sub" style="margin-top: 0.8rem; font-size: 0.9rem">
-          Livro, cap. 6 (Monitoring Distributed Systems): "o que está quebrado"
-          versus "por que está quebrado".
-        </p>
-      </section>
-
-      <!-- 20 QUATRO SINAIS -->
-      <section class="slide">
-        <div class="eyebrow c-orange">03 · O que medir</div>
-        <h2>Quatro sinais <span style="color: var(--lime)">de ouro</span></h2>
         <div class="grid cols-2" style="margin-top: 1.4rem">
-          <div class="card c-red">
-            <h3>Latência</h3>
-            <p>Quanto tempo leva para responder. Erros lentos também contam.</p>
+          <div class="card c-blue">
+            <h3>Um evento · log</h3>
+            <pre style="margin-top: 0.8rem; font-size: 0.78rem">request_id=<span style="color: #FF8AC4">"a7f3c2"</span>
+duration_ms=<span style="color: #FFD27A">10000</span></pre>
+            <p>Este pedido demorou 10 segundos.</p>
           </div>
           <div class="card c-orange">
-            <h3>Tráfego</h3>
-            <p>Quanta demanda chega, por exemplo em pedidos por segundo.</p>
-          </div>
-          <div class="card c-yellow">
-            <h3>Erros</h3>
-            <p>
-              Quantas respostas falham, de que tipo e se há regra de negócio
-              tratada.
-            </p>
-          </div>
-          <div class="card c-blue">
-            <h3>Saturação</h3>
-            <p>Quão cheio está: fila, memória, conexões.</p>
+            <h3>Exemplo · pedidos acima de 2 s por minuto</h3>
+            <div class="mbars" style="margin-top: 0.8rem; gap: 0.7rem">
+              <div class="mbar">
+                <span>12:01</span>
+                <div class="mtrack">
+                  <div class="mfill" style="width: 17%"></div>
+                </div>
+                <b>2</b>
+              </div>
+              <div class="mbar hot">
+                <span>12:03</span>
+                <div class="mtrack">
+                  <div class="mfill" style="width: 100%"></div>
+                </div>
+                <b>12</b>
+              </div>
+            </div>
+            <p style="margin-top: 0.8rem">A quantidade está aumentando.</p>
           </div>
         </div>
-        <p class="sub" style="margin-top: 1.2rem; font-size: 0.9rem">
-          Livro, cap. 6: se você só puder medir quatro coisas num sistema
-          voltado ao usuário, meça estas. Comece simples: "As simple as
-          possible, no simpler".
+        <p class="sub" style="margin-top: 1.2rem">
+          Quatro sinais: tempo, volume, falhas e capacidade.
         </p>
       </section>
 
-      <!-- 21 A MÉDIA ENGANA -->
+      <!-- 18 A MÉDIA ESCONDE A ESPERA -->
       <section class="slide">
         <div class="eyebrow c-orange">03 · O que medir</div>
-        <h2>A média <span style="color: var(--lime)">engana</span></h2>
+        <h2>A média <span style="color: var(--lime)">esconde a espera</span></h2>
+        <p class="sub" style="margin-top: 0.8rem">
+          Em 100 pedidos, 90 respondem em 0,2 s e 10 levam 10 s.
+        </p>
+        <div class="grid cols-2" style="margin-top: 1.2rem">
+          <div class="card c-blue">
+            <h3>90 pedidos</h3>
+            <p>Respondem rápido: 0,2 s.</p>
+          </div>
+          <div class="card c-orange">
+            <h3>10 pedidos</h3>
+            <p>Fazem algumas pessoas esperarem: 10 s.</p>
+          </div>
+        </div>
         <div
           class="grid cols-2"
           style="margin-top: 1.4rem; align-items: center"
         >
-          <div>
-            <p class="sub" style="max-width: none">
-              Em 100 pedidos, 90 levam 0,2 s. Os outros 10 levam 10 s.
-            </p>
-            <p class="sub" style="margin-top: 1rem; max-width: none">
-              A média dá 1,2 s e parece aceitável. Mas 1 em cada 10 usuários
-              esperou 10 segundos.
-            </p>
-          </div>
           <div class="mbars">
             <div class="mbar">
               <span>Média</span>
@@ -2207,150 +2135,92 @@
               </div>
               <b>1,2 s</b>
             </div>
-            <div class="mbar">
-              <span>p50 (caso comum)</span>
-              <div class="mtrack">
-                <div class="mfill" style="width: 2%"></div>
-              </div>
-              <b>0,2 s</b>
-            </div>
             <div class="mbar hot">
-              <span>p95 (cauda)</span>
+              <span>p95 (parte mais lenta)</span>
               <div class="mtrack">
                 <div class="mfill" style="width: 100%"></div>
               </div>
               <b>10 s</b>
             </div>
           </div>
+          <p class="sub" style="margin-top: 0; max-width: none">
+            O p95 é o tempo em que 95 de cada 100 pedidos terminam ou menos.
+            Aqui, ele mostra a espera de 10 segundos que a média esconde.
+          </p>
         </div>
-        <p class="sub" style="margin-top: 1.2rem; font-size: 0.9rem">
-          Livro, cap. 4 e cap. 6: use percentis, porque a média pode esconder a
-          cauda, onde estão os usuários mais afetados.
-        </p>
       </section>
 
-      <!-- 22 MÉTRICA POR ETAPA E TIPO -->
+      <!-- 19 MÉTRICA POR ETAPA E TIPO -->
       <section class="slide">
         <div class="eyebrow c-orange">03 · O que medir</div>
         <h2>
-          Métrica <span style="color: var(--lime)">por etapa e tipo</span>, não
-          genérica
+          Separe o que é tratado
+          <span style="color: var(--lime)">do que pede investigação</span>
         </h2>
         <p class="sub" style="margin-top: 1rem">
-          Um total genérico mostra 415 falhas. Por etapa e tipo, dá para separar
-          a regra tratada das falhas que pedem investigação.
+          O total de 415 falhas esconde uma diferença importante.
         </p>
         <div class="mbars" style="margin-top: 1.2rem">
           <div class="mbar">
-            <span>validar_saldo · insufficient_balance</span>
+            <span>Saldo insuficiente · regra tratada</span>
             <div class="mtrack">
               <div class="mfill" style="width: 100%"></div>
             </div>
             <b>412</b>
           </div>
           <div class="mbar hot">
-            <span>solicitar_reembolso · service_timeout</span>
+            <span>Falhas fora das regras tratadas</span>
             <div class="mtrack">
-              <div class="mfill" style="width: 0.5%"></div>
+              <div class="mfill" style="width: 0.75%"></div>
             </div>
-            <b>2</b>
-          </div>
-          <div class="mbar hot">
-            <span>montar_tela · unknown_error</span>
-            <div class="mtrack">
-              <div class="mfill" style="width: 0.25%"></div>
-            </div>
-            <b>1</b>
+            <b>3</b>
           </div>
         </div>
         <p class="sub" style="margin-top: 1rem; font-size: 0.9rem">
-          <code>business_rule_handled=true</code>: sem alerta;
-          <code>false</code>: alertar e investigar. As outras 3 falhas (2
-          timeouts e 1 desconhecida) ficam fora da regra tratada. Valores e
-          tipos ilustrativos.
+          412 casos tratados; 3 falhas fora dessa regra pedem investigação.
+          Valores ilustrativos.
         </p>
       </section>
 
-      <!-- 23 APRENDIZADO 3 -->
+      <!-- 20 APRENDIZADO 3 -->
       <section class="slide" id="lesson-3">
-        <div class="lesson-num">03 / 05 · O QUE MEDIR</div>
+        <div class="lesson-num">03 / 04 · O QUE MEDIR</div>
         <p class="big-lesson">
-          Meça o que o usuário sente, em
-          <span style="color: var(--lime)">percentis</span>, por etapa, e separe
-          a regra tratada da falha a investigar.
+          Meça o que o usuário sente e separe
+          <span style="color: var(--lime)">o tratado do que investigar.</span>
         </p>
       </section>
 
-      <!-- 24 BLOCO 4: ALERTA É PROMESSA -->
+      <!-- 21 ALERTA É UMA PROMESSA -->
       <section class="slide">
         <div class="eyebrow c-yellow">04 · Quando alertar</div>
         <h2>Alerta é uma <span style="color: var(--lime)">promessa</span></h2>
         <p class="sub">
-          Quando um alerta toca, alguém precisa agir. Se não há ação porque a
-          regra de negócio já trata a falha, aquilo não deveria ter disparado
-          uma página.
+          Quando toca, alguém precisa agir. Uma regra de negócio já tratada não
+          deveria interromper ninguém.
         </p>
         <div class="grid cols-2" style="margin-top: 1.6rem">
           <div class="card c-red">
-            <h3>Não alerte por</h3>
+            <h3>Antes · monitor genérico</h3>
             <p>
-              "Isso parece estranho." Cada página interrompe uma pessoa, no
-              trabalho ou no descanso.
+              A faixa HTTP 4xx–5xx também alertava para saldo insuficiente, uma
+              regra já tratada.
             </p>
           </div>
           <div class="card c-blue">
-            <h3>Alerte quando</h3>
+            <h3>Depois · monitor específico</h3>
             <p>
-              Um usuário está sendo afetado agora, ou vai ser em breve, por uma
-              falha fora das regras de negócio tratadas.
+              Saldo tratado não alerta; falhas fora das regras tratadas, até as
+              desconhecidas, pedem investigação.
             </p>
           </div>
         </div>
-        <p class="sub" style="margin-top: 1.2rem; font-size: 0.9rem">
-          Livro, cap. 6: não dispare alerta só porque "algo parece um pouco
-          estranho".
+        <p class="sub" style="margin-top: 1.2rem">
+          O alerta deve tocar quando alguém precisa investigar ou corrigir.
         </p>
       </section>
 
-      <!-- 25 O ALERTA QUE TOCAVA ATÉ PARA ERRO TRATADO -->
-      <section class="slide">
-        <div class="eyebrow c-red">04 · Quando alertar</div>
-        <h2>
-          O alerta que tocava até para
-          <span style="color: var(--lime)">erro tratado</span>
-        </h2>
-        <p class="sub">
-          O monitor antigo cobria a faixa HTTP 4xx–5xx. Até uma resposta de erro
-          de negócio já tratado, como saldo insuficiente, podia gerar alerta.
-        </p>
-        <div class="grid cols-2" style="margin-top: 1.6rem">
-          <div class="card c-red">
-            <h3>Antes</h3>
-            <p>
-              O monitor cobria a faixa inteira de respostas HTTP 4xx–5xx. Assim,
-              até uma regra de negócio tratada podia gerar falso positivo.
-            </p>
-          </div>
-          <div class="card c-blue">
-            <h3>Depois</h3>
-            <p>
-              O monitor atual é mais específico: saldo insuficiente é tratado
-              sem alerta; falhas fora das regras de negócio tratadas acionam
-              investigação, inclusive as desconhecidas.
-            </p>
-          </div>
-        </div>
-        <p class="sub" style="margin-top: 1.4rem">
-          Um alerta que repete sem motivo treina o time a
-          <span style="color: var(--lime)">ignorar o próximo</span>.
-        </p>
-        <p class="sub" style="margin-top: 0.5rem; font-size: 0.9rem">
-          Livro, cap. 6: filtre os casos em que o usuário não é afetado. Só
-          assim a página volta a significar alguma coisa.
-        </p>
-      </section>
-
-      <!-- 26 ALERTE NO SINTOMA -->
+      <!-- 22 ALERTE NO SINTOMA -->
       <section class="slide">
         <div class="eyebrow c-yellow">04 · Quando alertar</div>
         <h2>Alerte no <span style="color: var(--lime)">sintoma</span></h2>
@@ -2379,75 +2249,9 @@
         </p>
       </section>
 
-      <!-- 27 TODA PÁGINA É ACIONÁVEL -->
-      <section class="slide">
-        <div class="eyebrow c-yellow">04 · Quando alertar</div>
-        <h2>
-          Toda página <span style="color: var(--lime)">precisa de ação</span>
-        </h2>
-        <ul class="plain" style="margin-top: 1.6rem">
-          <li>
-            Dá para agir agora? Se a resposta pode esperar até amanhã, não é
-            página.
-          </li>
-          <li>
-            A resposta exige raciocínio? Se é um passo robótico, automatize.
-          </li>
-          <li>
-            É um problema novo? Repetir o mesmo alerta todo dia treina o time a
-            ignorar.
-          </li>
-        </ul>
-        <p class="sub" style="margin-top: 1.2rem; font-size: 0.9rem">
-          Livro, cap. 6: pergunte se o alerta pode ser ignorado com segurança, e
-          quem mais ele aciona. Livro, cap. 11: no máximo dois incidentes por
-          turno de 12 horas. Em componente saudável, a mediana é de zero páginas
-          por dia.
-        </p>
-      </section>
-
-      <!-- 28 SLO -->
-      <section class="slide">
-        <div class="eyebrow c-yellow">04 · Quando alertar</div>
-        <h2>
-          SLO: a meta que <span style="color: var(--lime)">dá sentido</span> aos
-          números
-        </h2>
-        <div class="grid cols-3" style="margin-top: 1.6rem">
-          <div class="card c-blue">
-            <h3>SLI</h3>
-            <p>
-              A medida. Ex.: % de pedidos concluídos sem falhas fora das regras
-              de negócio tratadas.
-            </p>
-          </div>
-          <div class="card c-orange">
-            <h3>SLO</h3>
-            <p>
-              A meta. Ex.: 99% dos pedidos sem falhas fora das regras tratadas,
-              em 30 dias.
-            </p>
-          </div>
-          <div class="card c-red">
-            <h3>Orçamento de erro</h3>
-            <p>
-              Quanta falha ainda cabe na meta antes de parar para consertar.
-            </p>
-          </div>
-        </div>
-        <p class="sub" style="margin-top: 1.4rem">
-          Não escolha a meta pelo que você já entrega. Escolha pelo que o
-          usuário precisa.
-        </p>
-        <p class="sub" style="margin-top: 0.8rem; font-size: 0.9rem">
-          Livro, cap. 4 (Service Level Objectives): SLI é a medida, SLO é o
-          alvo, e o orçamento de erro diz quando agir.
-        </p>
-      </section>
-
-      <!-- 29 APRENDIZADO 4 -->
+      <!-- 23 APRENDIZADO 4 -->
       <section class="slide" id="lesson-4">
-        <div class="lesson-num">04 / 05 · QUANDO ALERTAR</div>
+        <div class="lesson-num">04 / 04 · QUANDO ALERTAR</div>
         <p class="big-lesson">
           Regra tratada não alerta. Falhas fora dela, sobretudo desconhecidas,
           pedem alerta acionável — e
@@ -2455,7 +2259,7 @@
         </p>
       </section>
 
-      <!-- 30 BLOCO 5: DEMO -->
+      <!-- 24 BLOCO 5: DEMO -->
       <!-- TODO(Lary): antes da palestra, testar a demo no notebook conectado ao projetor, com e sem internet. Os dados da demo são simulados. -->
       <section class="slide" id="slide-demo">
         <div class="eyebrow c-red">05 · Demo ao vivo</div>
@@ -2504,7 +2308,7 @@
         </p>
       </section>
 
-      <!-- 31 DESFECHO: DA HISTÓRIA AOS 15 MINUTOS -->
+      <!-- 25 DESFECHO: DA HISTÓRIA AOS 15 MINUTOS -->
       <section class="slide">
         <div class="eyebrow c-orange">05 · Voltando à história</div>
         <h2>
@@ -2542,81 +2346,10 @@
         </p>
       </section>
 
-      <!-- 32 INVESTIGAR SEM CHUTAR -->
-      <section class="slide">
-        <div class="eyebrow c-orange">05 · Dicas do livro</div>
-        <h2>Investigar <span style="color: var(--lime)">sem chutar</span></h2>
-        <div class="grid cols-2" style="margin-top: 1.4rem">
-          <div class="card c-red">
-            <h3>Estabilize primeiro</h3>
-            <p>
-              Antes da causa raiz, faça o sistema funcionar melhor: desvie
-              tráfego, reduza carga.
-            </p>
-          </div>
-          <div class="card c-orange">
-            <h3>Veja o que mudou por último</h3>
-            <p>
-              Deploy, configuração, mudança de contrato ou de carga. Sistemas
-              tendem a continuar como estavam.
-            </p>
-          </div>
-          <div class="card c-yellow">
-            <h3>Divida ao meio</h3>
-            <p>
-              Teste metade do caminho de cada vez, até restar uma peça suspeita.
-            </p>
-          </div>
-          <div class="card c-blue">
-            <h3>Anote tudo</h3>
-            <p>
-              O que tentou, quando e o resultado. Isso vira a base do
-              postmortem.
-            </p>
-          </div>
-        </div>
-        <p class="sub" style="margin-top: 1.2rem; font-size: 0.9rem">
-          Livro, cap. 12 (Effective Troubleshooting): estabilizar antes de
-          investigar, o que mudou por último, dividir ao meio e anotar os
-          testes.
-        </p>
-      </section>
-
-      <!-- 33 POSTMORTEM SEM CULPA -->
-      <section class="slide">
-        <div class="eyebrow c-orange">05 · Dicas do livro</div>
-        <h2>Postmortem <span style="color: var(--lime)">sem culpa</span></h2>
-        <p class="sub">
-          Postmortem é o registro do incidente: o impacto, o que foi feito, a
-          causa raiz e as ações para não repetir.
-        </p>
-        <ul class="plain" style="margin-top: 1.4rem">
-          <li>Foco no sistema e no processo, nunca em quem apertou o botão.</li>
-          <li>
-            Defina antes os gatilhos: queda visível, perda de dados, plantão que
-            precisou intervir, resolução longa demais.
-          </li>
-          <li>Cada ação tem dono e prazo. Documento sem revisão não existe.</li>
-        </ul>
-        <p class="sub" style="margin-top: 1.2rem; font-size: 0.9rem">
-          Livro, cap. 15 (Postmortem Culture): a culpa faz as pessoas esconderem
-          problemas. Corrigir o sistema funciona melhor.
-        </p>
-      </section>
-
-      <!-- 34 APRENDIZADO 5 -->
-      <section class="slide" id="lesson-5">
-        <div class="lesson-num">05 / 05 · DESFECHO</div>
-        <p class="big-lesson">
-          Investigar com <span style="color: var(--lime)">método</span> encurta
-          o incidente. E o postmortem evita que ele volte.
-        </p>
-      </section>
-
-      <!-- 35 RECAPITULANDO -->
+      <!-- 26 RECAPITULANDO -->
       <section class="slide">
         <div class="eyebrow c-blue">Recapitulando</div>
-        <h2>Os 5 aprendizados</h2>
+        <h2>Os 4 aprendizados</h2>
         <ol class="agenda done">
           <li class="agenda-row">
             <span class="agenda-badge">01</span>
@@ -2645,7 +2378,7 @@
             <div>
               <span class="agenda-title">Meça o que o usuário sente</span
               ><span class="agenda-text"
-                >Percentis, por etapa e por tipo de erro.</span
+                >Observe a demora e separe regras tratadas de falhas a investigar.</span
               >
             </div>
           </li>
@@ -2658,74 +2391,44 @@
               >
             </div>
           </li>
-          <li class="agenda-row">
-            <span class="agenda-badge">05</span>
-            <div>
-              <span class="agenda-title">Método encurta o incidente</span
-              ><span class="agenda-text"
-                >Estabilize, divida, anote e faça o postmortem.</span
-              >
-            </div>
-          </li>
         </ol>
       </section>
 
-      <!-- 36 ANTES E DEPOIS -->
+      <!-- 27 GUIA PRÁTICO: INVESTIGAR SEM CHUTAR -->
       <section class="slide">
         <div class="eyebrow c-orange">Para levar</div>
         <h2>
-          O que <span style="color: var(--lime)">mudou</span> depois do
-          incidente
+          Guia prático:
+          <span style="color: var(--lime)">investigar sem chutar</span>
         </h2>
-        <div class="grid cols-3" style="margin-top: 1.6rem">
+        <div class="grid cols-2" style="margin-top: 1.4rem">
           <div class="card c-red">
-            <h3>Antes</h3>
-            <p>
-              Monitor por faixa HTTP 4xx–5xx. Logs genéricos. Investigações de
-              30 a 60 minutos.
-            </p>
+            <h3>Estabilize primeiro</h3>
+            <p>Antes de buscar a causa, faça o sistema funcionar melhor.</p>
           </div>
-          <div class="card c-blue">
-            <h3>Depois</h3>
-            <p>
-              Regra de negócio tratada sem alerta; erros fora dela acionam
-              investigação. Próximo alerta no mesmo fluxo: 15 minutos.
-            </p>
+          <div class="card c-orange">
+            <h3>Veja o que mudou por último</h3>
+            <p>Deploy, configuração, contrato ou carga são bons pontos de partida.</p>
           </div>
           <div class="card c-yellow">
-            <h3>O que não muda</h3>
+            <h3>Divida ao meio</h3>
+            <p>Isole metade do caminho de cada vez até localizar a falha.</p>
+          </div>
+          <div class="card c-blue">
+            <h3>Anote tudo</h3>
             <p>
-              O cliente. Cada alerta começa por alguém tentando concluir algo
-              importante.
+              Registre o que tentou, quando e qual foi o resultado. Isso vira o
+              histórico do incidente.
             </p>
           </div>
         </div>
+        <p class="sub" style="margin-top: 1.2rem; font-size: 0.9rem">
+          Fotografe este guia: estabilize, procure mudanças, divida o caminho e
+          registre os testes.
+        </p>
       </section>
 
-      <!-- 37 CHECKLIST DE BOLSO -->
-      <section class="slide slide-checklist">
-        <div class="eyebrow c-yellow">Para levar</div>
-        <h2>Checklist <span style="color: var(--lime)">de bolso</span></h2>
-        <div class="grid cols-2" style="margin-top: 1.4rem">
-          <ul class="plain">
-            <li>Logs com contexto, id e tipo de erro</li>
-            <li>Regra de negócio tratada identificada</li>
-            <li>Sem dados sensíveis nos logs</li>
-            <li>Métricas por etapa e por tipo</li>
-          </ul>
-          <ul class="plain">
-            <li>Percentis, não só média</li>
-            <li>
-              Alertas para erros fora das regras tratadas, sempre acionáveis
-            </li>
-            <li>Um runbook para cada alerta</li>
-            <li>Postmortem sem culpa, com ações</li>
-          </ul>
-        </div>
-        <p class="sub" style="margin-top: 1.6rem">Fotografe este slide.</p>
-      </section>
-
-      <!-- 38 REFERÊNCIAS -->
+      <!-- 28 REFERÊNCIAS -->
       <section class="slide">
         <div class="eyebrow c-blue">Referências</div>
         <h2>Leitura <span style="color: var(--lime)">para estudar</span></h2>
@@ -2741,15 +2444,13 @@
           <li>MARTIN, Robert C. <i>Código Limpo</i>.</li>
         </ul>
         <p class="sub" style="margin-top: 1.2rem; font-size: 0.9rem">
-          Capítulos citados: 4 (Objetivos do nível de serviço), 6 (Monitorando
-          sistemas distribuídos), 11 (De plantão), 12 (Resolvendo problemas de
-          modo eficiente) e 15 (Cultura de postmortem: aprendendo com o
-          fracasso). Texto próprio, sem reproduzir trechos do livro (CC BY-NC-ND
-          4.0).
+          Capítulos citados: 6 (Monitorando sistemas distribuídos) e 12
+          (Resolvendo problemas de modo eficiente). Texto próprio, sem
+          reproduzir trechos do livro (CC BY-NC-ND 4.0).
         </p>
       </section>
 
-      <!-- 39 FECHAMENTO: ATENÇÃO AO CLIENTE -->
+      <!-- 29 FECHAMENTO: ATENÇÃO AO CLIENTE -->
       <section
         class="slide quote-slide"
         style="align-items: center; text-align: center"
@@ -2782,7 +2483,7 @@
         </p>
       </section>
 
-      <!-- 40 FINAL -->
+      <!-- 30 FINAL -->
       <section class="slide slide-capa slide-final" style="text-align: left">
         <div
           class="deco-circle"
@@ -2857,7 +2558,7 @@
     <div class="footer-meta" id="footer-meta">
       Código que fala · DevFest São Paulo 2026
     </div>
-    <div class="progress-label" id="progress-label">01 / 40</div>
+    <div class="progress-label" id="progress-label">01 / 30</div>
     <div class="scrubber" id="scrubber"></div>
     <div class="speaker-notes" id="notes"></div>
     <button class="tap-nav prev" id="prevTap" aria-label="Slide anterior">
@@ -2929,46 +2630,36 @@
         if (targetIdx >= 0) idx = targetIdx
       }
 
-      // Notas do apresentador: uma por slide, na mesma ordem dos slides (são 40). Tecla N mostra e esconde.
+      // Notas do apresentador: uma por slide, na mesma ordem. Tecla N mostra e esconde.
       const notesBySlide = [
         'Capa. Respirar e deixar 3 segundos de silêncio antes do título.',
         'Material e código: mostrar os links dos slides e da demo; o QR code aponta para o repositório.',
         'Quem sou eu. Contar de cabeça, sem ler a lista.',
-        'Roteiro: os 5 blocos. Avisar que cada bloco termina com um aprendizado.',
+        'Roteiro: quatro ideias, um caso e uma demo. Os aprendizados aparecem juntos no fim.',
         'Pergunta para a sala. Esperar as mãos levantarem.',
         'Palavras simples: log, métrica, alerta e observabilidade. Não pressupor o jargão.',
         'A história: um cliente sem saldo tentando concluir um reembolso. Contar sem nomes e sem detalhes internos.',
-        'A tela certa não apareceu. Mostrar o contraste entre o esperado e o que o cliente viu.',
-        'A causa: uma mudança de contrato. Sintoma é a tela genérica; causa é o contrato.',
+        'A tela errada revela a causa. Sintoma é o que o cliente sente; causa é a mudança de contrato que explica.',
         'Estancar primeiro: o hotfix veio antes da explicação. O atendimento também trouxe o caso.',
         'Aprendizado 1: uma frase e uma pausa.',
         'Log é mensagem para quem lê depois. Dois tipos de formato.',
         'Ruim x bom: o mesmo evento, dois logs. Ler os dois devagar.',
-        'As quatro perguntas que um log deve responder.',
         'Contexto sem expor ninguém. LGPD antes do incidente.',
         'O id que atravessa os serviços. Apontar as três linhas.',
         'Regra de negócio tratada x falha a investigar. Explicar o campo business_rule_handled; é prática nossa, não regra do livro.',
         'Aprendizado 2: uma frase e uma pausa.',
-        'Sintoma x causa: separar o que dói da explicação.',
-        'Quatro sinais de ouro. Cada card é uma pergunta. Lembrar do simples primeiro.',
-        'A média engana. Mostrar as barras e fazer a conta de cabeça.',
-        'Métrica por etapa e tipo. Separar regra tratada das falhas que pedem investigação. Exemplos e valores ilustrativos.',
+        'Conecte log e métrica: um log conta um pedido; a métrica conta pedidos acima de 2 s por minuto. Os valores 2 e 12 são ilustrativos; cite também os quatro sinais.',
+        'Use o exemplo dos 90 pedidos rápidos e 10 lentos. Média: 1,2 s; p95: 10 s. Explique p95 como o tempo em que 95 de cada 100 pedidos terminam ou menos.',
+        'Mostre só os dois grupos: 412 casos tratados e 3 falhas para investigar. Valores ilustrativos.',
         'Aprendizado 3: uma frase e uma pausa.',
-        'Alerta é promessa: se ninguém age, não é alerta.',
-        'O monitor antigo cobria a faixa HTTP 4xx–5xx. Falso positivo: uma regra de negócio tratada também podia gerar alerta.',
-        'Não alertar para regra de negócio conhecida e tratada; alertar falhas fora dela, sobretudo desconhecidas. Dar um exemplo de cada lado.',
-        'Toda página precisa de ação. Usar as perguntas como checklist. Citar os números do livro.',
-        'SLO: o alvo, a medida e o orçamento de erro.',
+        'Alerta é uma promessa. Compare o monitor HTTP 4xx–5xx antigo ao monitor específico; saldo tratado não alerta.',
+        'Alerte no sintoma que afeta a pessoa usuária; causas ajudam a investigar.',
         'Aprendizado 4: uma frase e uma pausa.',
         'Abrir a demo em outra aba. Mostrar o antes e o depois. O link de volta retorna para este slide.',
         'Linha do tempo: 15 minutos no alerta seguinte. Dizer que o tempo anterior é uma faixa.',
-        'Investigar sem chutar: as dicas do livro, uma por vez.',
-        'Postmortem sem culpa. Destacar o foco no sistema.',
-        'Aprendizado 5: uma frase e uma pausa.',
-        'Recapitulando os cinco aprendizados em uma frase cada. Deixar fotografar.',
-        'Antes e depois. Terminar pela coluna do cliente, que não muda.',
-        'Checklist de bolso. Pedir para fotografar.',
-        'Referências. Citar a versão gratuita do livro.',
+        'Recapitule os quatro aprendizados com uma frase por item.',
+        'Guia prático: estabilize, procure mudanças, divida o caminho e anote os testes. Dê tempo para fotografar.',
+        'Referências. Citar a versão gratuita do livro e apenas os capítulos usados.',
         'Fechamento: atenção ao cliente é reputação. Silêncio de 2 a 3 segundos antes de ler.',
         'Agradecer, mostrar o QR code do LinkedIn e abrir para perguntas.'
       ]

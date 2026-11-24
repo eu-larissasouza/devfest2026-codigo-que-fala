@@ -42,9 +42,9 @@ Palestra programada para 28/11/2026, na FIAP Paulista, como parte do DevFest Sã
 
 ## O material
 
-- **40 slides** com navegação por teclado, clique e gesto em telas sensíveis ao toque.
+- **30 slides** com navegação por teclado, clique e gesto em telas sensíveis ao toque.
 - O **slide 2** reúne os links para a apresentação, a demo e o repositório.
-- O **slide 30** introduz a demo; o **slide 40** tem o perfil do LinkedIn e o QR code.
+- O **slide 24** introduz a demo; o **slide 30** tem o perfil do LinkedIn e o QR code.
 - A demo simula um reembolso em quatro etapas, com dados gerados no navegador e sem servidor.
 - O layout se adapta a desktop, tablet e celular.
 
